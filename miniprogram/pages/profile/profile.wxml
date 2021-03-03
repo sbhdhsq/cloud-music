@@ -1,0 +1,7 @@
+<h-navbar>
+  <view slot="content" style="width:100rpx;height:70%;display:flex;color:#FFFFFF;font-family: '楷体'">
+    <text>我的</text>
+  </view>
+</h-navbar>
+
+

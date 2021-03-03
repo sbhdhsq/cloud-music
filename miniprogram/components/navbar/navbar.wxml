@@ -1,0 +1,11 @@
+<view class="nav" style="height:{{navBarHeight}}px; ">
+  <view class="nav-main">
+    <view 
+      class="capsule-box" 
+      style="height:{{menuHeight}}px; min-height:{{menuHeight}}px; line-height:{{menuHeight}}px; bottom:{{menuBotton}}px;left:{{menuRight}}px;"
+    >
+    <slot name="content"></slot>
+    
+    </view>
+  </view>
+</view>

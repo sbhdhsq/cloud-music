@@ -1,0 +1,41 @@
+@import '..\\..\\global.scss';
+
+.header {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 88rpx;
+  display: flex;
+  align-items: center;
+  z-index: 99;
+  background-color: $bgColor;
+  box-sizing: border-box;
+  padding-left: $gap;
+  scroll-padding-right: $gap;
+}
+
+
+.left{
+  width: $imgSm;
+  height: $imgSm;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .icon-edit{
+    font-size: 48rpx;
+    color: $primaryColor;
+  }
+}
+.right{
+  flex: 1;
+}
+
+.container{
+  margin-top: 170rpx;
+  padding: $gap/2 $gap/2 $gap/2 0;
+}
+
+.blog-panel{
+  margin-bottom: $gap;
+}

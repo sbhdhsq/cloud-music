@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "h-playlist": "/components/playlist/playlist",
+    "h-navbar":"/components/navbar/navbar"
+  },
+  "navigationStyle":"custom",
+  "enablePullDownRefresh": true
+}

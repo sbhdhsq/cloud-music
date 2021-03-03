@@ -1,0 +1,26 @@
+<view wx:if="{{picUrl}}" class="player-container" style="background:url({{picUrl}}) center/cover no-repeat">
+</view>
+<view class="player-mask"></view>
+
+<view class="player-info">
+   <!-- 封面信息 -->
+  <view class="player-disc {{isPlaying?'playing':''}}" hidden="{{isLyricShow}}" bind:tap="onLyricShow">
+    <image class="player-img  zhuan {{isPlaying?'':'ting'}}" src="{{picUrl}}"></image>
+  </view>
+
+  <!-- 歌词 -->
+  <h-lyric isLyricShow="{{isLyricShow}}" lyric="{{lyric}}" bind:tap="onLyricShow"></h-lyric>
+  
+   <!-- 进度条 -->
+<view class="progress-bar">
+  <h-progress-bar bind:musicEnd="onNext"/>
+</view>
+
+
+  <!-- 控制面板 -->
+  <view class="control">
+    <text class="iconfont .icon-prev" bind:tap="onPrev"></text>
+    <text class="iconfont {{isPlaying?'icon-pause':'icon-bofang'}}" bind:tap="togglePlaying"></text>
+    <text class="iconfont .icon-next" bind:tap="onNext"></text>
+  </view>
+</view>

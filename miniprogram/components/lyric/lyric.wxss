@@ -1,0 +1,23 @@
+/* .container{
+  position: absolute;
+  top: 400rpx;
+  left: 200rpx;
+  color: #fff;
+} */
+
+.lyric-scroll{
+  margin-top: 190rpx;
+  width: 100%;
+  height: 60%;
+  color: chocolate;
+  font-size: 32rpx;
+}
+
+.lyric-panel {
+  position: relative;
+  top: 50%;
+}
+
+.lyric {
+  min-height: 64rpx;
+}

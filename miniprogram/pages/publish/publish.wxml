@@ -1,0 +1,29 @@
+<h-navbar>
+  <view slot="content" style="width:800rpx;height:70%;color:#FFFFFF;font-family: '楷体'">
+    <text class='iconfont icon-fanhui' style="margin-left:40rpx;color: #fff;z-index:1000" bind:tap="back"></text> <text style="margin-left:260rpx;">发布</text>
+  </view>
+</h-navbar>
+
+<view class="container">
+<textarea class="content" placeholder="分享新鲜事..." bindinput="onInput" maxlength="140" auto-focus
+bindfocus="onFocus" bindblur="onBlur"></textarea>
+
+
+<view class="image-list">
+  <block wx:for="{{images}}" wx:key="*this">
+    <view class="image-wrap">
+      <image class="image" src="{{item}}" mode="aspectFill" bind:tap="onPreviewImage" data-imgsrc="{{item}}"></image>
+      <i class="iconfont icon-shanchu1" bind:tap="onDelImage" data-index="{{index}}"></i>
+    </view>
+  </block>
+<view class="image-wrap selectPhoto" hidden="{{!selectPhoto}}" bind:tap="onChooseImage">
+<i class="iconfont icon-jia"></i>
+    </view>
+  </view> 
+</view> 
+
+
+<view class="footer" style="bottom:{{footerBottom}}px">
+  <text class="words-num">{{wordsNum}}</text>
+  <button class="send-btn" bind:tap="send">发布</button>
+</view>

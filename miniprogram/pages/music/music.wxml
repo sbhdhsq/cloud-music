@@ -1,0 +1,22 @@
+<!--pages/music/music.wxml-->
+<h-navbar>
+  <view slot="content" style="width:100rpx;height:70%;display:flex;color:#FFFFFF;font-family: '楷体'">
+    <text>音乐</text>
+  </view>
+</h-navbar>
+
+
+<swiper indicator-dots="true" indicator-active-color="#d43c33" autoplay="true"
+interval="5000" duration="1000" class="swiper">
+  <swiper-item wx:for="{{imgUrls}}">
+    <image src="{{item.url}}" class="img" ></image>
+  </swiper-item>
+</swiper>
+
+
+<text class="title">场景歌单</text>
+<view class="playlist-container">
+  <block wx:for="{{playlist}}" wx:key="_id">
+    <h-playlist playlist="{{item}}"></h-playlist>
+  </block>
+</view>

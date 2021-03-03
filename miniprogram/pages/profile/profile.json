@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "h-navbar":"/components/navbar/navbar"
+  },
+  "navigationStyle":"custom"
+}

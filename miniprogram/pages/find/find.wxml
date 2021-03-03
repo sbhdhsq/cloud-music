@@ -1,0 +1,35 @@
+<!--自定义导航-->
+<h-navbar>
+  <view slot="content" style="width:100rpx;height:70%;display:flex;color:#FFFFFF;font-family: '楷体'">
+    <text>发现</text>
+  </view>
+</h-navbar>
+
+<!--顶部搜索区-->
+<view class="header">
+ <view class="left" bind:tap="onPublish">
+ <!--左侧的发布图标-->
+ <i class="iconfont icon-edit"></i>
+ </view>
+
+ <view class="right">
+ <!--引入搜索组件，接受组件回传的search方法-->
+   <h-search bind:search="onSearch" />
+ </view>
+</view>
+
+<!--博客卡片列表-->
+
+  <view class="container">
+  <block wx:for="{{blogList}}" wx:key="_id">
+    <view class="blog-panel">
+      <h-blog-card blog="{{item}}" data-blogid="{{item._id}}" bind:tap="goDetail" />
+      <h-blog-ctrl blogId="{{item._id}}" blog="{{item}}" />
+    </view>
+  </block>
+</view>
+
+  <h-login modalShow="{{modalShow}}" bind:loginsuccess="onLoginSuccess"
+  bind:loginfail="onLoginFail">
+</h-login>
+

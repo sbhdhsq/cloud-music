@@ -1,0 +1,8 @@
+{
+  "usingComponents": {  
+    "h-navbar":"/components/navbar/navbar",
+    "h-blog-card": "/components/blog-card/blog-card",
+    "h-blog-ctrl": "/components/blog-ctrl/blog-ctrl"
+  },
+   "navigationStyle":"custom"
+}
